@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: url('/images/130611.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cover {
+    position: relative;
+    width: 320px; /* Adjust as needed */
+    height: 480px; /* Adjust as needed */
+}
+
+.front {
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(to right, #346B78, #44908D);
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.back {
+    /* If any content needs to be added to the back side */
+}
+
+form {
+    width: 100%;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+label {
+    font-size: 18px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-custom {
+    background-color: #2F4858;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #44908D;
+    transform: translateY(-2px);
+}
+
+.text-muted {
+    color: #fff;
+}

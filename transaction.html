@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile Transaction History</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="./css/homepage.css">
+        <link rel="stylesheet" href="./css/footer.css">
+        <link rel="stylesheet" href="./css/transaction.css">
+        <script src="https://kit.fontawesome.com/2cfefaba62.js" crossorigin="anonymous"></script>
+        <script src="./js/cart.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <a href="index.html" class="logo"><i class="fas fa-store-alt"></i>pokemon go store</a>
+            <nav class="navbar">
+                <a  href="index.html">home</a>
+                <a href="#store">store</a>
+                <a href="#about"> About</a>
+                <a href="#review">review</a>
+                <a href="#order">order</a>
+            </nav>
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <i class="fas fa-search" id="search-icon"></i>
+                <a href="cart.html" class="fas fa-shopping-cart custom-class"></a>
+            </div>
+            <div class="iconProfile"></div>
+        </header>
+        <form action="" id="search-form">
+            <input type="search" placeholder="Search Food" name="" id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+            <i class="fas fa-times" id="close"></i>
+        </form>
+        
+        <div class="loader-container">
+            <img src="./images/pika.gif" alt="">
+        </div>
+        <section class="transaction-container adjusted-font-sizing">
+            <div>
+                <h1>TRANSACTION HISTORY</h1>
+            </div>
+            <table class="transaction-table" id="transaction-table">
+                <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Date and Time</th>
+                </tr>
+            </table>
+        </section>
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <img src="images/pika.gif" class="logo">
+                    <p>Pokémon GO is playable in English, French, German, Italian, Russian, Japanese, Spanish, Traditional Chinese, Korean, Thai, Brazillian Portuguese, Turkish, and Indonesian.
+                    </p>
+                </div>
+                <div class="col">
+                    <h3>School <div class="underline"><span></span></div></h3>
+                    <p>Padre Paredes St.</p>
+                    <p>Sampaloc, Manila</p>
+                    <p>1015 Metro Manila</p>
+                    <p class="email-id">info@feutech.edu.ph</p>
+                    <h4>+63 - 0953 194 3900</h4>
+                </div>
+                <div class="col">
+                    <h3>Links <div class="underline"><span></span></div></h3>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">Contacts</a></li>
+                </ul>
+                </div>
+                <div class="col">
+                    <h3>Newsletter <div class="underline"><span></span></div></h3>
+                    <form>
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="Enter your email id" required>
+                        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/PokemonGO/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/pokemongoapp/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@pokemongo" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">"In compliance with copyright regulations, the images used herein are the property of Niantic. This project is for educational purposes only, and no copyright infringement is intended."</p>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="./js/authentication.js"></script>
+        <script src="./js/homepage.js"></script>
+        <script src="./js/cart.js"></script>
+    </body>
+</html>

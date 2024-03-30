@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checkout Page</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="./css/checkout.css">
+        <link rel="stylesheet" href="./css/homepage.css">
+        <link rel="stylesheet" href="./css/footer.css">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/2cfefaba62.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="header">
+            <a href="index.html" class="logo"><i class="fas fa-store-alt"></i>Pokemon Go Store</a>
+            <nav class="navbar">
+                <a class="active" href="index.html">Home</a>
+                <a href="store.html">Store</a>
+                <a href="#about">About</a>
+                <a href="#review">Review</a>
+                <a href="#order">Order</a>
+            </nav>
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <i class="fas fa-search" id="search-icon"></i>
+                <a href="cart.html" class="fas fa-shopping-cart"></a>
+            </div>
+            <div class="iconProfile"></div>
+        </header>
+        <form action="" id="search-form" >
+            <input type="search" placeholder="Search Food" name="" id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+            <i class="fas fa-times" id="close"></i>
+        </form>
+        <div class="loader-container">
+            <img src="./images/pika.gif" alt="">
+        </div>
+        <main class="checkout adjusted-font-sizing">
+            <section class="checkout-container billing-adress">
+                <h1>Billing Address</h1>
+                <p>Padre Paredes St, Sampaloc, Manila, 1015 Metro Manila</p>
+            </section>
+            <section class="checkout-container products-ordered">
+                <h1>Products Ordered</h1>
+                <table class="products-ordered-table" id="carts-table">
+                    <tr>
+                        <th>Item</th>
+                        <th>Unit Price</th>
+                        <th>Amount</th>
+                        <th>Sub Total</th>
+                    </tr>
+                </table>
+            </section>
+            <section class="checkout-container payment-method" id="payment-method">
+                <h1>Payment Method</h1>
+                <div class="payment-method-options">
+                    <div>
+                        <input type="radio" id="seven-eleven" name="payment-method" value="cash-on-delivery" />
+                        <label for="seven-eleven">Cash on Delivery</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" id="payment-center-e-wallet" name="payment-method" value="payment-center-e-wallet" />
+                        <label for="payment-center-e-wallet">Payment Center / E-Wallet</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" id="online-banking" name="payment-method" value="online-banking" />
+                        <label for="online-banking">Online Banking</label>
+                    </div>
+                </div>
+                <div>
+                    <div id="cash-on-delivery-container" class="hidden-payment-option payment-method-block">
+                        <div class="information">
+                            <i class="fa-solid fa-exclamation"></i>
+                            <div>Kindly prepare the exact amount upon delivery of item(s). Thank you.</div>
+                        </div>
+                    </div>
+                    <div id="payment-center-e-wallet-container" class="hidden-payment-option payment-method-block">
+                        <div>Select from Payment Center / E-Wallet services:</div>
+                        <div class="payment-center-e-wallet-block">
+                            <input type="radio" id="seven-eleven" name="payment-center-e-wallet-selected" value="seven-eleven" />
+                            <label for="seven-eleven">
+                                <div class="payment-method-logo">
+                                    <img src="./images/logo_711.png" alt="7/11 CLiQQ">
+                                </div>
+                                <div>7-eleven CLiQQ</div>
+                            </label>
+                        </div>
+                        <div class="payment-center-e-wallet-block">
+                            <input type="radio" id="gcash" name="payment-center-e-wallet-selected" value="gcash" />
+                            <label for="gcash">
+                                <div class="payment-method-logo">
+                                    <img src="./images/logo_gcash.png" alt="GCash">
+                                </div>
+                                <div>GCash</div>
+                            </label>
+                        </div>
+                        <div class="payment-center-e-wallet-block">
+                            <input type="radio" id="maya" name="payment-center-e-wallet-selected" value="maya" />
+                            <label for="maya">
+                                <div class="payment-method-logo">
+                                    <img src="./images/logo_maya.png" alt="Maya">
+                                </div>
+                                <div>Maya</div>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="online-banking-container" class="hidden-payment-option payment-method-block">
+                        <div>Select from Online Banking services:</div>
+                        <div class="payment-center-e-wallet-block">
+                            <input type="radio" id="bpi" name="online-banking-selected" value="bpi" />
+                            <label for="bpi">
+                                <div class="payment-method-logo">
+                                    <img src="./images/logo_bpi.png" alt="BPI">
+                                </div>
+                                <div>BPI</div>
+                            </label>
+                        </div>
+                        <div class="payment-center-e-wallet-block">
+                            <input type="radio" id="ub" name="online-banking-selected" value="ub" />
+                            <label for="ub">
+                                <div class="payment-method-logo">
+                                    <img src="./images/logo_ub.png" alt="Union Bank">
+                                </div>
+                                <div>Union Bank</div>
+                            </label>
+                        </div>
+                        <div class="payment-center-e-wallet-block">
+                            <input type="radio" id="bdo" name="online-banking-selected" value="bdo" />
+                            <label for="bdo">
+                                <div class="payment-method-logo">
+                                    <img src="./images/logo_bdo.png" alt="BDO">
+                                </div>
+                                <div>BDO</div>
+                            </label>
+                        </div>
+                        <div class="payment-center-e-wallet-block">
+                            <input type="radio" id="boc" name="online-banking-selected" value="boc" />
+                            <label for="boc">
+                                <div class="payment-method-logo">
+                                    <img src="./images/logo_boc.png" alt="Bank of Commerce">
+                                </div>
+                                <div>Bank of Commerce</div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="number-container">
+                        <div id="reference-number-container" class="number-block">
+                            <label for="reference-number">Enter Reference Number</label>
+                            <input class="input-alphanumeric" type="text" id="reference-number" name="reference-number" />
+                        </div>
+                        <div id="registered-phone-number-container" class="number-block">
+                            <label for="registered-phone-number">Enter Registered Phone Number</label>
+                            <input class="input-alphanumeric" type="text" id="registered-phone-number" name="registered-phone-number" />
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+            <section class="checkout-container summary" id="summary">
+                <h1>Summary</h1>
+                <div class="summary-fees-container">
+                    <div>
+                        <div>Merchandise Total:</div>
+                        <div id="merchandise-total"></div>
+                    </div>
+                    <div>
+                        <div>Shipping Total:</div>
+                        <div id="shipping-total"></div>
+                    </div>
+                    <div>
+                        <div>Handing Fee:</div>
+                        <div id="handing-fee"></div>
+                    </div>
+                    <div>
+                        <div>Total Payment:</div>
+                        <div id="total-payment"></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <button id="place-order-button" class="btn">Place Order</button>
+                    </div>
+                </div>
+                
+            </section>
+        </main>
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <img src="images/pika.gif" class="logo">
+                    <p>Pokémon GO is playable in English, French, German, Italian, Russian, Japanese, Spanish, Traditional
+                        Chinese, Korean, Thai, Brazillian Portuguese, Turkish, and Indonesian.
+                    </p>
+                </div>
+                <div class="col">
+                    <h3>School <div class="underline"><span></span></div>
+                    </h3>
+                    <p>Padre Paredes St.</p>
+                    <p>Sampaloc, Manila</p>
+                    <p>1015 Metro Manila</p>
+                    <p class="email-id">info@feutech.edu.ph</p>
+                    <h4>+63 - 0953 194 3900</h4>
+                </div>
+                <div class="col">
+                    <h3>Links <div class="underline"><span></span></div>
+                    </h3>
+                    <ul>
+                        <li><a href="https://pokemongolive.com/" target="_blank" rel="noopener noreferrer">Pokémon GO Live</a>
+                        </li>
+                        <li><a href="https://pokemongolive.com/leaderboard" target="_blank"
+                                rel="noopener noreferrer">Leaderboard</a></li>
+                        <li><a href="https://pokemongolive.com/events" target="_blank" rel="noopener noreferrer">Events</a></li>
+                        <li><a href="https://pokemongolive.com/community-day/map" target="_blank"
+                                rel="noopener noreferrer">Community Day Map</a></li>
+                        <li><a href="">Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Newsletter <div class="underline"><span></span></div>
+                    </h3>
+                    <form>
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="Enter your email id" required>
+                        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/PokemonGO/" target="_blank" rel="noopener noreferrer"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/pokemongoapp/" target="_blank" rel="noopener noreferrer"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@pokemongo" target="_blank" rel="noopener noreferrer"><i
+                                class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg" target="_blank"
+                            rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">"In compliance with copyright regulations, the images used herein are the property of Niantic.
+                This project is for educational purposes only, and no copyright infringement is intended."</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="./js/authentication.js"></script>
+        <script src="./js/homepage.js"></script>
+        <script src="./js/cart.js"></script>
+    </body>
+</html>

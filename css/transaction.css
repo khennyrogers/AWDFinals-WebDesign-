@@ -1,0 +1,62 @@
+/* CSS for profileTransaction.js */
+
+/* Style the table */
+#transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top:80px;
+}
+
+/* Style table header */
+#transaction-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 8px;
+}
+
+/* Style table rows */
+#transaction-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Style alternate rows */
+#transaction-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect */
+#transaction-table tr:hover {
+    background-color: #ddd;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.transaction-table {
+    border-radius: 10px;
+    padding: 20px 30px 10px 30px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+th {
+    text-align: left;
+}
+
+.adjusted-font-sizing {
+    font-size: initial;
+}
+
+.transaction-container {
+    margin: 100px;
+
+}

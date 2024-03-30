@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration Form</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cover">
+            <div class="front">
+                <main>
+                    <form id="login-form">
+                        <h1>Login</h1>
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-custom btn-block">Login</button>
+                        <p class="text-muted">Don't have an account yet? <a href="./registration.html" class="fw-bold text-body">Register here</a></p>
+                    </form>
+                </main>
+            </div>
+            <div class="back">
+                <!-- Placeholder for back content, if any -->
+            </div>
+        </div>
+    </div>
+    <script src="./js/login.js"></script>
+</body>
+</html>

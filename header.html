@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Go Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <script src="https://kit.fontawesome.com/2cfefaba62.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+    <a href="#" class="logo"><i class="fas fa-store-alt"></i>pokemon go store</a>
+    
+    <nav class="navbar">
+        <a class="active" href="#home">home</a>
+        <a href="#store">store</a>
+        <a href="#about"> About</a>
+        <a href="#review">review</a>
+        <a href="#order">order</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+    </div>
+    <div class="iconProfile">
+
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const profile = localStorage.getItem("CurrentLoginEmail");
+            if (profile) {
+                // If profile exists (user is logged in), show sign out and profile links
+                document.querySelector('.iconProfile').innerHTML = `
+                    <a href="index.html" class="logout">Logout</a>
+                    <a href="profile.html" class="sign-icons">Profile</a>
+                `;
+            } else {
+                // If profile doesn't exist (user is not logged in), show sign up and sign in links
+                document.querySelector('.iconProfile').innerHTML = `
+                    <a href="registration.html" class="sign-icons">Sign Up</a>
+                    <a href="login.html" class="sign-icons">Sign In</a>
+                `;
+            }
+        });
+    </script>
+    
+</header>
+
+<!-- search form -->
+<form action="" id="search-form">
+    <input type="search" placeholder="Search Food" name="" id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>

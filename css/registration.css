@@ -1,0 +1,88 @@
+/* registration.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    /* Use the background image and gradient from the template */
+    background: url('/images/130611.gif')no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+main {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    /* Use the gradient for the background */
+    background: linear-gradient(to right, #346B78, #44908D);
+
+    border-radius: 15px; /* Match the border-radius from the template */
+}
+
+form {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align: center;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color:#2F4858;
+    font-size: 18px;
+    background-color: #494930; /* Match the gradient color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #44908D;
+}
+.btn-custom {
+    background-color: #2F4858; /* Match the gradient color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color:  #44908D; /* Change color on hover */
+    transform: translateY(-2px); /* Add a slight lift effect */
+}
+
